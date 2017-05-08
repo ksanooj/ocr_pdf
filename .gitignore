@@ -1,0 +1,4 @@
+*.pyc
+.idea/
+project_data/input/*
+project_data/output/*
