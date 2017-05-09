@@ -1,4 +1,4 @@
-from setup import PDF_DIR, IMG_DIR, TXT_DIR
+from settings import PDF_DIR, IMG_DIR, TXT_DIR
 import os
 
 

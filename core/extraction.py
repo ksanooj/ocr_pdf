@@ -1,6 +1,7 @@
-from setup import TXT_DIR
+from settings import TXT_DIR
 from PIL import Image
 import pytesseract
+# import os
 
 
 def extract_data_from_image(fp):
@@ -8,5 +9,5 @@ def extract_data_from_image(fp):
     out_file = TXT_DIR + fp.split('/')[-1].split('.')[-2] + '.txt'
     with open(out_file, 'w') as out:
         out.write(text)
-        print('created ' + out_file)
-
+        print('created ' + fp.split('/')[-1].split('.')[-2] + '.txt')
+    # os.remove(fp)
