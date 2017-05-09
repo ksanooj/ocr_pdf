@@ -1,4 +1,7 @@
 *.pyc
 .idea/
-project_data/input/*
-project_data/output/*
+.eggs/
+*.egg-info/
+project_data/extracted_text_files/*
+project_data/converted_images/*
+project_data/source_pdf_files/*
