@@ -1,0 +1,10 @@
+This file explains how to configure this script on an ubuntu machine.
+
+ 1. Install 'python' and 'virtualenv'
+        Python comes installed by default on ubuntu installations. You can verify whether python is present in your
+    system by opening bash shell and typing `python`. If python is present, it will display python version and its
+    prompt ">>>" in the terminal window.
+        If python is not present, you can install it by typing 'sudo apt-get install python2.7'
+
+
+[To be completed]
