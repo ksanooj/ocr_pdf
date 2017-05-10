@@ -7,5 +7,3 @@ def convert_pdf_to_image(pdf):
         img_file = IMG_DIR + pdf.split('/')[-1].split('.')[-2] + '.jpg'
         img = img.convert('jpg')
         img.save(filename=img_file)
-
-        print('created ' + img_file)
