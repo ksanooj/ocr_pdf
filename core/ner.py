@@ -16,7 +16,7 @@ def organization_details(fp):
 
 def process_with_nltk_ner():
     try:
-        for item in organization_details('/home/qburst/Documents/Projects/python/ocr_pdf/project_data/extracted_text_files/1_CnCknj2mA3Ol67CGSjRm6nsqfIzenPIW1Pafr8MZQ-0.txt'):
+        for item in organization_details('/home/qburst/Documents/Projects/python/ocr_pdf/project_data/extracted_text_files/BeverleyStrategicPlanningGroupLLCArticles-0.txt'):
             tokenized = nltk.word_tokenize(item)
             tagged = nltk.pos_tag(tokenized)
             # print tagged
@@ -28,11 +28,11 @@ def process_with_nltk_ner():
 
 def process_with_stanford_ner():
     try:
-        item = organization_details('/home/qburst/Documents/Projects/python/ocr_pdf/project_data/extracted_text_files/1_CnCknj2mA3Ol67CGSjRm6nsqfIzenPIW1Pafr8MZQ-1.txt')
+        item = organization_details('/home/qburst/Documents/Projects/python/ocr_pdf/project_data/extracted_text_files/BeverleyStrategicPlanningGroupLLCArticles-0.txt')
         sentence = nltk.word_tokenize(item)
         tagged_list_1 = st.tag(sentence)
         entity_list = []
-        entity = []
+        # entity = []
         for item in tagged_list_1:
             if item[1] == 'ORGANIZATION':
                 entity_list.append(item[0])
@@ -41,11 +41,11 @@ def process_with_stanford_ner():
         # for item in tagged_list_2:
         #     if item[1] == 'O':
         #         entity.append(item[0])
-        entity = nltk.ne_chunk(tagged_list_1)
 
-        business_name = " ".join(entity)
+        business_name = " ".join(entity_list)
         print business_name
     except Exception as e:
         print str(e)
 
 process_with_stanford_ner()
+# process_with_nltk_ner()
