@@ -10,3 +10,4 @@ pytesseract==0.1.6
 six==1.10.0
 Wand==0.4.4
 nltk==3.2.2
+probablepeople==0.5.2
