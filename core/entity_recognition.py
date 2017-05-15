@@ -38,7 +38,6 @@ def process_with_stanford_ner(fp):
         tagger = ner.SocketNER(host='localhost', port=8090)
         entities = tagger.get_entities(item)['ORGANIZATION']
         print entities
-        print entities
         for item in tagged_list_1:
             if item[1] == 'ORGANIZATION':
                 entity_list.append(item[0])
@@ -53,6 +52,7 @@ def process_with_stanford_ner(fp):
     except Exception as e:
         print str(e)
 
-process_with_stanford_ner('/home/qburst/Documents/Projects/python/document_classifier/project_data/extracted_text_files/W-IN.txt')
+
+process_with_stanford_ner('/home/qburst/Documents/Projects/python/document_classifier/project_data/source_pdf_files/GJdsiR8EdzfAgaUWQODYeEBqbhPoZ3jKvFeaF5RKf5Y_2.txt')
 
 # process_with_nltk_ner()

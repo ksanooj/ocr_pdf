@@ -1,8 +1,8 @@
 import os
 
 from core.utils import data_file_names, image_file_names, dir_names
-from core.conversion import convert_pdf_to_image
-from core.ocr import extract_data_from_image
+from core.conversion import convert_pdf_to_image, convert_pdf_to_image_blob
+from core.ocr import extract_data_from_image, extract_data_from_blob
 from settings import IMG_DIR, PDF_DIR, TXT_DIR
 
 
@@ -26,7 +26,6 @@ def extract_business_names():
         out_file = TXT_DIR + img_dir.split('/')[-1] + '.txt'
         with open(out_file, 'w') as out:
             out.write('\n'.join(data))
-            # print('created ' + out_file)
 
 convert_files()
 extract_business_names()
