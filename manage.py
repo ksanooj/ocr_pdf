@@ -9,6 +9,7 @@ if __name__ == "__main__":
     os.environ['PDF_DIR'] = settings.PDF_DIR or (os.path.dirname(__file__) + '/project_data/source_pdf_files/')
     os.environ['IMG_DIR'] = settings.IMG_DIR or (os.path.dirname(__file__) + '/project_data/converted_images/')
     os.environ['TXT_DIR'] = settings.TXT_DIR or (os.path.dirname(__file__) + '/project_data/extracted_text_files/')
+    os.environ['ENTITY_BLACK_LIST'] = os.path.dirname(__file__) + '/project_data/entity_name_black_list'
     os.environ['CONVERSION_RESOLUTION'] = settings.CONVERSION_RESOLUTION or '160'
 
     if "execute" in sys.argv:

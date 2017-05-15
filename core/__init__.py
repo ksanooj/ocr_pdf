@@ -3,6 +3,7 @@ import os
 from core.utils import data_file_names, image_file_names, dir_names
 from core.conversion import convert_pdf_to_image, convert_pdf_to_image_blob
 from core.ocr import extract_data_from_image, extract_data_from_blob
+from core.entity_recognition import process_with_stanford_ner
 from settings import IMG_DIR, PDF_DIR, TXT_DIR
 
 
@@ -27,5 +28,15 @@ def extract_business_names():
         with open(out_file, 'w') as out:
             out.write('\n'.join(data))
 
-convert_files()
-extract_business_names()
+
+def extract_business_name_from_pdf_using_pyocr():
+
+    for filename in data_file_names(PDF_DIR):
+        blob_list = convert_pdf_to_image_blob(filename)
+        data_list = extract_data_from_blob(blob_list)
+        business_names = process_with_stanford_ner(data_list)
+        print business_names
+
+# convert_files()
+# extract_business_names()
+extract_business_name_from_pdf_using_pyocr()
