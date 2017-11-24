@@ -9,7 +9,7 @@
     sudo nano /etc/apt/sources.list.d/tor.list
     ```
 * Paste this content in that file, save and close it.
-    ```bash
+    ```
     deb http://deb.torproject.org/torproject.org xenial main
     deb-src http://deb.torproject.org/torproject.org xenial main
     ```
